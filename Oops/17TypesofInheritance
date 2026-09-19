@@ -1,0 +1,85 @@
+//Types of Inheritance
+
+In C++, inheritance can be of different types based on how classes are connected.
+
+1. Single Inheritance
+
+One parent → one child
+
+class A {
+};
+
+class B : public A {
+};
+A
+↓
+B
+2. Multilevel Inheritance
+
+Parent → child → another child
+
+class A {
+};
+
+class B : public A {
+};
+
+class C : public B {
+};
+A
+↓
+B
+↓
+C
+3. Multiple Inheritance
+
+One child inherits from multiple parents
+
+class A {
+};
+
+class B {
+};
+
+class C : public A, public B {
+};
+A ──┐
+    ↓
+    C
+    ↑
+B ──┘
+4. Hierarchical Inheritance
+
+One parent → multiple children
+
+class A {
+};
+
+class B : public A {
+};
+
+class C : public A {
+};
+    A
+   / \
+  B   C
+5. Hybrid Inheritance
+
+A combination of two or more types of inheritance.
+
+For example, a combination of hierarchical and multiple inheritance.
+
+    A
+   / \
+  B   C
+   \ /
+    D
+Remember
+Type	      Structure
+Single	      A → B
+Multilevel	  A → B → C
+Multiple	  A + B → C
+Hierarchical  A → B, C
+Hybrid	      Combination
+
+These are the types of inheritance.
