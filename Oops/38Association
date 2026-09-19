@@ -1,0 +1,37 @@
+//Association
+
+Association is a general relationship where two classes/objects are connected or interact with each other.
+
+It does not necessarily mean ownership.
+
+Example:
+
+class Teacher {
+public:
+    void teach() {
+        cout << "Teaching";
+    }
+};
+
+class Student {
+public:
+    void learn(Teacher& t) {
+        t.teach();
+    }
+};
+
+Here:
+
+Student interacts with Teacher
+A Student does not own the Teacher
+Both can exist independently
+Student ←→ Teacher
+      interaction
+Composition vs Aggregation vs Association
+Composition → strong has-a
+Aggregation → weak has-a
+Association → general relationship/interaction
+
+Simple definition:
+
+Association = a relationship where two independent classes/objects are connected or interact with each other.

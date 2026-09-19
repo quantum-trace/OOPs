@@ -1,0 +1,50 @@
+//Function Overriding
+
+Function overriding happens when a child class provides its own version of a function that already exists in the parent class.
+
+Example:
+
+class Animal {
+public:
+    void sound() {
+        cout << "Animal sound";
+    }
+};
+
+class Dog : public Animal {
+public:
+    void sound() {
+        cout << "Bark";
+    }
+};
+
+Here both classes have:
+
+sound()
+
+But Dog provides its own implementation of the parent's sound().
+
+Dog d;
+d.sound();
+
+Output:
+
+Bark
+Overloading vs Overriding
+
+Overloading:
+
+Same function name
+Different parameters
+Usually same class
+
+Overriding:
+
+Same function name
+Same parameters
+Parent + child class
+Child changes the implementation
+
+Simple definition:
+
+Function overriding = when a child class provides a new implementation of a function inherited from its parent class.

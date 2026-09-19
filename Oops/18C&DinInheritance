@@ -1,0 +1,45 @@
+//Constructor and Destructor in Inheritance
+
+When inheritance is used, constructors and destructors are called in a specific order.
+
+Constructor order
+
+Parent constructor → Child constructor
+
+class Parent {
+public:
+    Parent() {
+        cout << "Parent";
+    }
+};
+
+class Child : public Parent {
+public:
+    Child() {
+        cout << "Child";
+    }
+};
+Child obj;
+
+Output:
+
+ParentChild
+
+So the parent is constructed first, then the child.
+
+Destructor order
+
+The opposite happens:
+
+Child destructor → Parent destructor
+
+~Child()
+↓
+~Parent()
+
+So remember:
+
+Constructor: Parent → Child
+Destructor: Child → Parent
+
+That's the important part of this topic.

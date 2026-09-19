@@ -1,0 +1,52 @@
+//Runtime Polymorphism
+
+Runtime polymorphism means the function to execute is decided at runtime, based on the actual object.
+
+It is mainly achieved using function overriding + virtual functions.
+
+Example:
+
+class Animal {
+public:
+    virtual void sound() {
+        cout << "Animal sound";
+    }
+};
+
+class Dog : public Animal {
+public:
+    void sound() override {
+        cout << "Bark";
+    }
+};
+
+Now:
+
+Animal* a = new Dog();
+
+a->sound();
+
+Output:
+
+Bark
+
+Even though a is an Animal*, the actual object is a Dog, so the Dog's sound() runs.
+
+That's runtime polymorphism.
+
+Why is virtual important?
+
+Without virtual:
+
+Animal* a = new Dog();
+a->sound();
+
+the parent version may be called.
+
+With virtual, C++ performs dynamic dispatch and selects the overridden function based on the actual object at runtime.
+
+Simple definition
+
+Runtime polymorphism = when the function to execute is decided at runtime based on the actual object.
+
+The key concept here is virtual functions, which we'll study next.

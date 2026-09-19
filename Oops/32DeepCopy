@@ -1,0 +1,55 @@
+//Deep Copy
+
+Deep copy means creating a completely separate copy of the data.
+
+Unlike shallow copy, the pointer is not copied directly. New memory is allocated and the value is copied into it.
+
+Example:
+
+class Student {
+public:
+    int* age;
+
+    Student(int a) {
+        age = new int(a);
+    }
+
+    Student(const Student& s) {
+        age = new int(*s.age);
+    }
+};
+
+Now:
+
+Student s1(20);
+Student s2 = s1;
+
+Memory looks like:
+
+s1.age ──→ [20]
+
+s2.age ──→ [20]
+
+They have different memory locations.
+
+So:
+
+*s2.age = 25;
+
+will not change s1.age.
+
+Shallow vs Deep
+Shallow Copy:
+s1 ──→ [20] ←── s2
+       same memory
+
+Deep Copy:
+s1 ──→ [20]
+
+s2 ──→ [20]
+       separate memory
+Simple definition
+
+Deep copy = copying the actual data into newly allocated, independent memory.
+
+Deep copy is mainly needed when a class contains raw pointers/dynamically allocated resources.

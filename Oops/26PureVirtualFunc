@@ -1,0 +1,52 @@
+//Pure Virtual Function
+
+A pure virtual function is a virtual function that has no implementation in the parent class and is declared using = 0.
+
+Example:
+
+class Animal {
+public:
+    virtual void sound() = 0;
+};
+
+Here:
+
+virtual void sound() = 0;
+
+is a pure virtual function.
+
+A child class must provide its implementation:
+
+class Dog : public Animal {
+public:
+    void sound() override {
+        cout << "Bark";
+    }
+};
+Important
+
+A class containing at least one pure virtual function becomes an abstract class.
+
+Therefore:
+
+Animal a;  // ❌ Cannot create object
+
+But:
+
+Dog d;     // ✅
+Why use it?
+
+It forces child classes to provide their own implementation.
+
+For example:
+
+Animal
+  ↓
+sound() must be implemented
+  ↓
+Dog   → Bark
+Cat   → Meow
+
+Simple definition:
+
+Pure virtual function = a virtual function declared with = 0 that makes the class abstract and requires derived classes to implement it.

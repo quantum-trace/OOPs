@@ -1,0 +1,47 @@
+//Upcasting and Downcasting
+
+Casting between a parent (base) class and child (derived) class is called upcasting/downcasting.
+
+Upcasting
+
+Converting a child object → parent pointer/reference.
+
+class Animal {
+};
+
+class Dog : public Animal {
+};
+
+Dog d;
+Animal* a = &d;
+
+Here:
+
+Dog → Animal
+Child → Parent
+
+This is upcasting.
+
+It is generally safe and commonly used in runtime polymorphism.
+
+Downcasting
+
+Converting a parent pointer/reference → child pointer/reference.
+
+Animal* a = new Dog();
+
+Dog* d = dynamic_cast<Dog*>(a);
+
+Here:
+
+Animal → Dog
+Parent → Child
+
+This is downcasting.
+
+dynamic_cast can safely check at runtime whether the object is actually of the derived type.
+
+Simple definition
+
+Upcasting = Child → Parent
+Downcasting = Parent → Child

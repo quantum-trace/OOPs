@@ -1,0 +1,49 @@
+//Aggregation
+
+Aggregation is also a "has-a" relationship, but the contained object can exist independently of the container.
+
+Example:
+
+class Teacher {
+public:
+    string name;
+};
+
+class School {
+public:
+    Teacher* teacher;
+
+    School(Teacher* t) {
+        teacher = t;
+    }
+};
+
+Now:
+
+Teacher t;
+School s(&t);
+
+Here:
+
+School has a Teacher
+But the Teacher can exist without the School
+Teacher
+   ↑
+   |
+School
+
+If School is destroyed, Teacher t can still exist.
+
+Composition vs Aggregation
+
+Composition:
+
+Car has an Engine → strong ownership
+
+Aggregation:
+
+School has a Teacher → weaker relationship; Teacher can exist independently
+
+Simple definition:
+
+Aggregation = a class has a relationship with another object, but that object can exist independently of the class.

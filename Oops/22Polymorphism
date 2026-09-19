@@ -1,0 +1,57 @@
+//Polymorphism
+
+Polymorphism means one name/interface can have multiple forms or behaviors.
+
+The word literally means “many forms.”
+
+Example:
+
+class Animal {
+public:
+    void sound() {
+        cout << "Animal sound";
+    }
+};
+
+class Dog : public Animal {
+public:
+    void sound() {
+        cout << "Bark";
+    }
+};
+
+class Cat : public Animal {
+public:
+    void sound() {
+        cout << "Meow";
+    }
+};
+
+Here the function name is the same:
+
+sound()
+
+But it behaves differently:
+
+Dog → Bark
+Cat → Meow
+
+That's polymorphism.
+
+Two main types
+
+1. Compile-time polymorphism
+
+Function overloading
+Operator overloading
+
+2. Runtime polymorphism
+
+Function overriding
+Virtual functions
+
+We'll study compile-time and runtime polymorphism separately next.
+
+Simple definition:
+
+Polymorphism = the ability of the same interface/function name to behave differently in different situations.

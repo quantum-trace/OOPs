@@ -1,0 +1,34 @@
+//Rule of 0
+
+The Rule of 0 says:
+
+If your class does not manually manage resources, you should generally not write custom destructors, copy constructors, copy assignment, move constructors, or move assignment operators.
+
+Instead, use C++'s resource-managing classes such as:
+
+class Student {
+public:
+    string name;
+    vector<int> marks;
+};
+
+Here, string and vector manage their own memory.
+
+So you don't need to manually write:
+
+Destructor
+Copy Constructor
+Copy Assignment
+Move Constructor
+Move Assignment
+
+The compiler-generated versions handle these members correctly.
+
+Simple comparison
+Rule of 0 → Let C++ manage resources
+Rule of 3 → Custom destructor + copy operations
+Rule of 5 → Rule of 3 + move operations
+
+Simple definition:
+
+Rule of 0 = prefer using resource-managing types so your class doesn't need custom special member functions.

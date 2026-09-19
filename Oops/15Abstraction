@@ -1,0 +1,41 @@
+//Abstraction
+Abstraction means hiding unnecessary implementation details and showing only the essential functionality.
+
+Example:
+
+class Car {
+public:
+    void start() {
+        cout << "Car started";
+    }
+
+private:
+    void checkEngine() {
+        cout << "Checking engine";
+    }
+};
+
+When we do:
+
+Car c;
+c.start();
+
+We only need to know what start() does.
+
+We don't need to know the internal details of checkEngine() or how the car actually starts.
+
+Simple real-life example
+
+When you use an ATM:
+
+You enter PIN
+Select withdrawal
+Get money
+
+You don't need to know the internal banking process.
+
+That's abstraction.
+
+Simple definition
+
+Abstraction = hiding implementation details and exposing only the necessary functionality.

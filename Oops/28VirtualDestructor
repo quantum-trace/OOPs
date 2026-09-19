@@ -1,0 +1,41 @@
+//Virtual Destructor
+A virtual destructor is a destructor declared with the virtual keyword in the parent class.
+
+It is important when we delete a child object through a parent pointer.
+
+Example:
+
+class Animal {
+public:
+    virtual ~Animal() {
+        cout << "Animal destructor";
+    }
+};
+
+class Dog : public Animal {
+public:
+    ~Dog() {
+        cout << "Dog destructor";
+    }
+};
+
+Now:
+
+Animal* a = new Dog();
+delete a;
+
+Because the parent destructor is virtual, destruction happens correctly:
+
+Dog destructor
+Animal destructor
+Why do we need it?
+
+Without a virtual destructor, deleting a derived object through a base-class pointer can result in the derived destructor not being called, which can cause improper resource cleanup.
+
+Simple rule
+
+If a class is intended to be used as a base class polymorphically, its destructor should generally be virtual.
+
+Simple definition:
+
+Virtual destructor = a destructor that ensures the correct child and parent destructors are called when deleting an object through a parent pointer.

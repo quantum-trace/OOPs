@@ -1,0 +1,52 @@
+//Copy Constructor
+
+A copy constructor creates a new object by copying an existing object.
+
+Example:
+
+class Student {
+public:
+    string name;
+    int age;
+
+    Student(string n, int a) {
+        name = n;
+        age = a;
+    }
+
+    Student(const Student &s) {
+        name = s.name;
+        age = s.age;
+    }
+};
+
+Now:
+
+Student s1("Shubham", 20);
+Student s2(s1);
+
+Here:
+
+s1 → existing object
+s2 → new object
+s2 gets the values copied from s1
+
+So:
+
+s2.name  // Shubham
+s2.age   // 20
+How to identify it?
+
+A copy constructor generally looks like:
+
+ClassName(const ClassName &obj)
+
+It takes a reference to an object of the same class.
+
+Why &?
+
+We use a reference so that we don't create another copy of the object just to pass it into the copy constructor.
+
+Simple definition
+
+Copy constructor = constructor used to create a new object by copying an existing object.

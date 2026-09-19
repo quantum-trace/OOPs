@@ -1,0 +1,37 @@
+//Compile Time polymorphism
+
+Compile-time polymorphism means the compiler decides which function/operator to use at compile time.
+
+The two main examples are:
+
+1. Function Overloading
+
+Same function name, different parameters:
+
+class Calculator {
+public:
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+};
+
+The compiler decides which add() to call based on the arguments.
+
+2. Operator Overloading
+
+We define how an operator behaves for our objects:
+
+p3 = p1 + p2;
+
+The compiler determines which overloaded + operator to use.
+
+Simple definition
+
+Compile-time polymorphism = polymorphism where the function/operator to be used is decided by the compiler at compile time.
+
+Main examples:
+Function Overloading + Operator Overloading

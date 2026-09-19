@@ -1,0 +1,52 @@
+//Composition
+Composition means one class contains an object of another class as a member.
+
+It represents a strong "has-a" relationship.
+
+Example:
+
+class Engine {
+public:
+    void start() {
+        cout << "Engine started";
+    }
+};
+
+class Car {
+private:
+    Engine engine;
+
+public:
+    void startCar() {
+        engine.start();
+    }
+};
+
+Here:
+
+Car has an Engine
+engine is a data member of Car
+Car c;
+c.startCar();
+Important idea
+
+The Engine object is part of the Car.
+
+Car
+ └── Engine
+
+If the Car object is destroyed, its contained Engine object is also destroyed.
+
+Inheritance vs Composition
+
+Inheritance:
+
+Dog is an Animal
+
+Composition:
+
+Car has an Engine
+
+Simple definition:
+
+Composition = a class contains an object of another class as a member, creating a strong has-a relationship.

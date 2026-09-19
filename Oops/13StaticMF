@@ -1,0 +1,44 @@
+//Static Member Functions
+A static member function is a member function declared using the static keyword.
+
+class Student {
+public:
+    static void show() {
+        cout << "Hello";
+    }
+};
+How do we call it?
+
+Since it belongs to the class, we can call it without creating an object:
+
+Student::show();
+Important rule
+
+A static member function cannot directly access non-static data members.
+
+class Student {
+public:
+    int age;
+
+    static void show() {
+        cout << age;  // ❌
+    }
+};
+
+Why? Because age belongs to an object, while show() is associated with the class and doesn't have a specific object.
+
+It can access static members:
+
+class Student {
+public:
+    static int count;
+
+    static void show() {
+        cout << count;  // ✅
+    }
+};
+Simple definition
+
+Static member function = a class-level function that can be called using the class name and does not require an object.
+
+

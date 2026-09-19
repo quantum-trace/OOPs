@@ -1,0 +1,35 @@
+//Friend Function
+
+A friend function is a function that is not a member of the class, but it is allowed to access the class's private and protected members.
+
+We declare it using the friend keyword.
+
+class Student {
+private:
+    int age = 20;
+
+public:
+    friend void show(Student s);
+};
+
+void show(Student s) {
+    cout << s.age;
+}
+
+Here:
+
+show() is not a member function of Student.
+But because it is declared as friend, it can access Student's private age.
+Student s;
+show(s);
+Important
+
+A friend function:
+
+❌ Is not called using object.function()
+✅ Is called like a normal function
+✅ Can access private and protected members
+
+Simple definition:
+
+Friend function = a non-member function that is given permission to access a class's private and protected members.

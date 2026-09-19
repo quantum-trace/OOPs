@@ -1,0 +1,39 @@
+//Copy Assignment Operator
+
+The copy assignment operator is used when an already existing object is assigned the value of another existing object.
+
+Example:
+
+Student s1("Shubham", 20);
+Student s2("Rahul", 21);
+
+s2 = s1;
+
+After this:
+
+s1 → Shubham, 20
+s2 → Shubham, 20
+
+The important difference is:
+
+Copy Constructor
+
+Creates a new object from an existing object:
+
+Student s2 = s1;
+Copy Assignment
+
+Both objects already exist:
+
+Student s2;
+s2 = s1;
+
+The operator involved is:
+
+operator=
+
+For classes containing raw pointers/dynamic memory, the copy assignment operator may also need a custom deep-copy implementation to avoid sharing the same memory.
+
+Simple definition:
+
+Copy assignment = copying the contents of one already-existing object into another already-existing object using =.

@@ -1,0 +1,30 @@
+//Data Members or Member Variables
+
+Data members are the variables declared inside a class.
+
+Example:
+
+class Student {
+public:
+    string name;
+    int age;
+};
+
+Here:
+
+name → data member
+age → data member
+
+Each object gets its own copy of these data members.
+
+Student s1;
+Student s2;
+
+s1.age = 20;
+s2.age = 25;
+
+Here s1.age and s2.age are separate.
+
+Simple definition:
+
+Data members are variables inside a class that store the data/state of an object.

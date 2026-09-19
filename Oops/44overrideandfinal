@@ -1,0 +1,53 @@
+//Override and Final
+
+These keywords are mainly used with inheritance and virtual functions.
+
+override
+
+override tells the compiler that a child-class function is intended to override a virtual function from the parent.
+
+class Animal {
+public:
+    virtual void sound() {
+        cout << "Animal";
+    }
+};
+
+class Dog : public Animal {
+public:
+    void sound() override {
+        cout << "Bark";
+    }
+};
+
+If you accidentally write the wrong function signature, override makes the compiler give an error.
+
+final
+
+final prevents further overriding or inheritance.
+
+Prevent overriding:
+class Animal {
+public:
+    virtual void sound() final {
+        cout << "Animal";
+    }
+};
+
+Now a child class cannot override sound().
+
+Prevent inheritance:
+class Dog final {
+};
+
+Now:
+
+class Puppy : public Dog {
+};  // ❌
+
+is not allowed.
+
+Simple definition
+
+override → confirms that a function overrides a parent virtual function.
+final → prevents further overriding or inheritance.

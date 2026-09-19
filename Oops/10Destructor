@@ -1,0 +1,45 @@
+//Destructor
+
+A destructor is a special member function that is automatically called when an object is destroyed.
+
+How to identify it?
+
+A destructor has:
+
+Same name as the class
+A ~ before the name
+No return type
+No parameters
+
+Example:
+
+class Student {
+public:
+    ~Student() {
+        cout << "Object destroyed";
+    }
+};
+
+Here:
+
+~Student()
+
+is the destructor.
+
+When is it called?
+int main() {
+    Student s1;
+
+} // s1 is destroyed here
+
+When s1 goes out of scope, its destructor is automatically called.
+
+Why do we use it?
+
+Mainly for cleanup, such as releasing resources held by an object.
+
+For example, dynamically allocated memory, files, connections, etc.
+
+Simple definition:
+
+Destructor = special member function automatically called when an object is destroyed, mainly for cleanup.

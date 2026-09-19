@@ -1,0 +1,103 @@
+//Constructor
+
+A constructor is a special member function that is automatically called when an object is created.
+
+How to identify a constructor?
+
+It has:
+
+Same name as the class
+No return type — not even void
+
+Example:
+
+class Student {
+public:
+    Student() {
+        cout << "Constructor called";
+    }
+};
+
+Here Student() is the constructor because:
+
+Class name = Student
+Constructor name = Student
+No return type
+
+When we create an object:
+
+Student s1;
+
+The constructor is automatically called.
+
+Main purpose
+
+A constructor is mainly used to initialize an object when it is created.
+
+Example:
+
+class Student {
+public:
+    int age;
+
+    Student() {
+        age = 20;
+    }
+};
+Student s1;
+
+cout << s1.age;  // 20
+
+So remember:
+
+Constructor = special function automatically called when an object is created, used mainly for initialization.
+
+Why do we use a constructor?
+
+Without a constructor:
+
+class Student {
+public:
+    int age;
+};
+
+Student s1;
+s1.age = 20;
+
+We have to initialize age separately.
+
+With a constructor:
+
+class Student {
+public:
+    int age;
+
+    Student() {
+        age = 20;
+    }
+};
+
+Student s1;
+
+Now age is automatically initialized when s1 is created.
+
+Main uses of constructors
+Initialize data members
+Automatically perform setup when an object is created
+Avoid writing initialization separately for every object.
+
+Example:
+
+Student s1;
+Student s2;
+Student s3;
+
+The constructor automatically runs for each object.
+
+So for the basic topic, remember:
+
+We use constructors to automatically initialize/set up an object when it is created.
+
+Now Constructor is done. ✅
+
+Next topic will be Default Constructor.

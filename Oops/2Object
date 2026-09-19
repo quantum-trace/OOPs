@@ -1,0 +1,249 @@
+//Object
+An object is an instance of a class.
+The word “instance” generally means an example or occurrence of something.
+
+In OOP:
+
+Instance = a particular object created from a class.
+
+For example, s1 is an instance of the Student class.
+
+So whenever you hear “instance of a class”, just think:
+
+“An actual object made from that class.”
+If a class is the blueprint, an object is the actual thing created using that blueprint.
+
+Example:
+
+class Student {
+public:
+    string name;
+    int age;
+};
+
+Here Student is the class.
+
+Now:
+
+Student s1;
+Student s2;
+
+s1 and s2 are objects of the Student class.
+
+Each object has its own copy of the non-static data members:
+
+s1.name = "Shubham";
+s1.age = 20;
+
+s2.name = "Rahul";
+s2.age = 21;
+
+So:
+
+Student → Class / Blueprint
+
+s1 → Object
+     name = Shubham
+     age = 20
+
+s2 → Object
+     name = Rahul
+     age = 21
+
+Objects can access the class's public members using the dot (.) operator:
+
+s1.name = "Shubham";
+s1.age = 20;
+Mental model
+
+Class = blueprint
+Object = actual instance created from that blueprint
+
+That's the core of Object.
+
+Class
+class Student {
+public:
+    string name;
+    int age;
+};
+
+This is the blueprint.
+
+It says:
+
+Every Student object will have a name and an age.
+
+Now create 2 objects
+Student s1;
+Student s2;
+
+You have made two separate objects.
+
+Think of it like making two boxes from the same blueprint:
+
+        Student class
+        (blueprint)
+          /     \
+         /       \
+        ↓         ↓
+      s1 box    s2 box
+
+Each box has its own name and age:
+Objects can access public members using .
+s1                    s2
+┌──────────┐          ┌──────────┐
+│ name     │          │ name     │
+│ age      │          │ age      │
+└──────────┘          └──────────┘
+
+Now:
+
+s1.age = 20;
+s2.age = 25;
+
+You get:
+
+s1                    s2
+┌──────────┐          ┌──────────┐
+│ age = 20 │          │ age = 25 │
+└──────────┘          └──────────┘
+
+They are completely separate.
+
+If you do:
+
+s1.age = 30;
+
+only s1 changes:
+
+s1                    s2
+┌──────────┐          ┌──────────┐
+│ age = 30 │          │ age = 25 │
+└──────────┘          └──────────┘
+So what does "copy" mean?
+
+When we say each object has its own copy of the data member, we mean:
+
+s1.age and s2.age are two separate variables.
+
+It's not:
+
+s1.age ───────→ same age ←─────── s2.age
+
+Instead:
+
+s1.age = 20
+
+s2.age = 25
+
+Two separate pieces of data.
+
+One correction to your original wording
+
+Don't say:
+
+"Object carries a copy of the class."
+
+Say:
+
+"Each object has its own copy of the class's non-static data members."
+
+That's the important idea.
+
+Don't worry about references yet. We'll encounter references later when we study pointers/references.
+
+1. Non-static data member
+
+This is the normal variable inside a class.
+
+class Student {
+public:
+    string name;
+    int age;
+};
+
+Here:
+
+name → non-static data member
+age  → non-static data member
+
+Every object gets its own separate copy.
+
+Student s1;
+Student s2;
+
+s1.age = 20;
+s2.age = 25;
+
+Think:
+
+s1                  s2
+┌─────────┐         ┌─────────┐
+│ age = 20 │         │ age = 25 │
+└─────────┘         └─────────┘
+   ↑                    ↑
+ separate              separate
+2. Static data member
+
+Yes, we can also make a variable static:
+
+class Student {
+public:
+    static int count;
+};
+
+Now count is shared by all objects.
+
+Instead of:
+
+s1 → its own count
+s2 → its own count
+s3 → its own count
+
+there is one common count:
+
+             count
+               ↑
+        ┌──────┼──────┐
+        ↓      ↓      ↓
+       s1     s2     s3
+
+For example, if:
+
+Student::count = 3;
+
+then all objects see the same count.
+
+The easiest difference
+NON-STATIC                    STATIC
+
+s1 → own age                  s1 ─┐
+s2 → own age                  s2 ─┼→ same count
+s3 → own age                  s3 ─┘
+Example
+class Student {
+public:
+    int age;             // non-static
+    static int count;    // static
+};
+
+If you create:
+
+Student s1;
+Student s2;
+
+then:
+
+s1 → age      ← separate
+s2 → age      ← separate
+
+s1 ─┐
+s2 ─┼→ count  ← shared
+For now, remember:
+
+Non-static = each object has its own copy.
+
+Static = one shared copy for the entire class.
+
+We'll study static members properly later as its own topic. For the Object topic, just knowing this distinction is enough.

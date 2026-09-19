@@ -1,0 +1,96 @@
+//Default Constructor
+A default constructor is a constructor that takes no arguments.
+
+Example:
+
+class Student {
+public:
+    int age;
+
+    Student() {
+        age = 20;
+    }
+};
+
+Here:
+
+Student()
+
+is a default constructor because it takes no parameters.
+
+When we create:
+
+Student s1;
+
+the default constructor is automatically called.
+
+One important point
+
+If you don't write any constructor, C++ can provide a default constructor automatically:
+
+class Student {
+public:
+    int age;
+};
+
+Student s1;
+
+Here C++ provides a default constructor implicitly.
+
+But if you write your own constructor, C++ won't automatically provide the no-argument one for you.
+
+Simple definition:
+
+Default constructor = constructor that takes no arguments.
+
+Exactly — the default constructor is itself a type of constructor. So there is no separate "use" of constructor vs default constructor.
+
+Think of it like:
+
+Constructor = general concept
+Default constructor = constructor with 0 parameters
+Parameterized constructor = constructor with parameters
+
+For example:
+
+class Student {
+public:
+    int age;
+
+    Student() {
+        age = 20;
+    }
+};
+
+Here Student() is both:
+
+a constructor ✅
+a default constructor ✅
+So why do we need constructors?
+
+Because constructors let us initialize objects automatically.
+
+For example, if every student should start with age 20:
+
+Student s1;
+Student s2;
+Student s3;
+
+The constructor automatically sets the age for each object.
+
+And later, with a parameterized constructor, we can give different values:
+
+Student(int a) {
+    age = a;
+}
+Student s1(20);
+Student s2(22);
+
+So the hierarchy is simply:
+
+Constructor
+→ Default Constructor
+→ Parameterized Constructor
+→ Copy Constructor
+
+We'll study each one by one.

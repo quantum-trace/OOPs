@@ -1,0 +1,34 @@
+//Encapsulation
+Encapsulation means bundling data and the functions that operate on that data together inside a class, while controlling access to the data.
+
+Example:
+
+class Student {
+private:
+    int age;
+
+public:
+    void setAge(int a) {
+        age = a;
+    }
+
+    int getAge() {
+        return age;
+    }
+};
+
+Here:
+
+age → data
+setAge() / getAge() → functions
+All are bundled inside Student.
+age is private, so outside code cannot directly change it.
+Student s;
+s.setAge(20);   // ✅
+
+But:
+
+s.age = 20;     // ❌
+Simple definition
+
+Encapsulation = wrapping data and related functions together in a class and controlling direct access to the data.

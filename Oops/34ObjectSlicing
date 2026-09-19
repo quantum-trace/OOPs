@@ -1,0 +1,50 @@
+//Object Slicing
+
+Object slicing happens when a child-class object is copied into a parent-class object by value.
+
+Example:
+
+class Animal {
+public:
+    int x = 10;
+};
+
+class Dog : public Animal {
+public:
+    int y = 20;
+};
+
+Now:
+
+Dog d;
+Animal a = d;
+
+d contains:
+
+Dog
+├── x
+└── y
+
+But a is an Animal object, so only the Animal part is copied:
+
+Animal
+└── x
+
+The Dog-specific part y is sliced off.
+
+That's why it's called object slicing.
+
+Important
+
+Object slicing generally occurs when assigning/copying by value:
+
+Animal a = d;  // slicing
+
+It does not happen when using a pointer or reference:
+
+Animal* a = &d;   // no slicing
+Animal& b = d;    // no slicing
+
+Simple definition:
+
+Object slicing = when a derived-class object is copied into a base-class object by value, causing the derived-specific part to be lost.

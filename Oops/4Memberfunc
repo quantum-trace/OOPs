@@ -1,0 +1,33 @@
+//Member Functions or Member Methods
+A member function is a function declared inside a class.
+
+Example:
+
+class Student {
+public:
+    string name;
+    int age;
+
+    void study() {
+        cout << "Student is studying";
+    }
+};
+
+Here study() is a member function because it is inside the Student class.
+
+An object can call it using the dot (.) operator:
+
+Student s1;
+s1.study();
+Simple definition
+
+A member function is a function inside a class that defines what an object can do.
+
+For example:
+
+Student → class
+name, age → data members
+study() → member function
+s1 → object
+
+Member Functions topic is this much.

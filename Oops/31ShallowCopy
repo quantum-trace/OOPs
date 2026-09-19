@@ -1,0 +1,49 @@
+//Shallow Copy
+
+Shallow copy means copying an object's data as it is, including copying the address stored in a pointer.
+
+Example:
+
+class Student {
+public:
+    int* age;
+
+    Student(int a) {
+        age = new int(a);
+    }
+};
+
+Suppose:
+
+Student s1(20);
+Student s2 = s1;
+
+With a shallow copy:
+
+s1.age ──→ [20]
+             ↑
+s2.age ──────┘
+
+Both s1.age and s2.age point to the same memory location.
+
+So if:
+
+*s2.age = 25;
+
+then:
+
+*s1.age
+
+also becomes 25.
+
+The problem
+
+Both objects are pointing to the same dynamically allocated memory.
+
+This can cause problems such as double deletion when both destructors try to free the same memory.
+
+Simple definition
+
+Shallow copy = copying the pointer/address itself, so multiple objects can point to the same underlying data.
+
+This becomes especially important when a class manages dynamic memory/resources.

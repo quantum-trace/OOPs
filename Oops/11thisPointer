@@ -1,0 +1,51 @@
+//this pointer
+this is a pointer that points to the current object.
+
+Example:
+
+class Student {
+public:
+    int age;
+
+    void setAge(int age) {
+        this->age = age;
+    }
+};
+
+Suppose:
+
+Student s1;
+s1.setAge(20);
+
+Inside setAge():
+
+age → function parameter
+this->age → s1's data member
+
+So:
+
+this->age = age;
+
+means:
+
+Set the current object's age to the given age.
+
+Why do we need this?
+
+Mainly when a data member and parameter have the same name.
+
+Without this:
+
+void setAge(int age) {
+    age = age;  // parameter assigned to itself ❌
+}
+
+With this:
+
+void setAge(int age) {
+    this->age = age;  // ✅
+}
+
+Simple definition:
+
+this is a pointer that refers to the current object inside a member function.

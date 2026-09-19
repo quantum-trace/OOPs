@@ -1,0 +1,46 @@
+# OOP Study Order
+
+1. Class
+2. Object
+3. Data Members
+4. Member Functions
+5. Access Specifiers
+6. Constructor
+7. Default Constructor
+8. Parameterized Constructor
+9. Copy Constructor
+10. Destructor
+11. this Pointer
+12. Static Data Members
+13. Static Member Functions
+14. Encapsulation
+15. Abstraction
+16. Inheritance
+17. Types of Inheritance
+18. Constructor & Destructor in Inheritance
+19. Function Overloading
+20. Operator Overloading
+21. Function Overriding
+22. Polymorphism
+23. Compile-Time Polymorphism
+24. Runtime Polymorphism
+25. Virtual Function
+26. Pure Virtual Function
+27. Abstract Class
+28. Virtual Destructor
+29. Friend Function
+30. Friend Class
+31. Shallow Copy
+32. Deep Copy
+33. Copy Assignment
+34. Object Slicing
+35. Upcasting & Downcasting
+36. Composition
+37. Aggregation
+38. Association
+39. Move Constructor
+40. Move Assignment
+41. Rule of 3
+42. Rule of 5
+43. Rule of 0
+44. override & final

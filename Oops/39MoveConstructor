@@ -1,0 +1,62 @@
+//Move Constructor
+
+A move constructor creates a new object by taking/stealing resources from a temporary (or otherwise movable) object instead of copying them.
+
+This is useful when a class owns dynamically allocated memory or other resources.
+
+Example:
+
+class Student {
+public:
+    int* age;
+
+    Student(int a) {
+        age = new int(a);
+    }
+
+    Student(Student&& s) {
+        age = s.age;
+        s.age = nullptr;
+    }
+};
+
+Suppose:
+
+Student s1(20);
+Student s2 = std::move(s1);
+
+Instead of allocating new memory and copying 20, s2 takes the memory owned by s1.
+
+Before:
+
+s1 → [20]
+s2
+
+After:
+
+s1 → nullptr
+
+s2 → [20]
+Copy vs Move
+
+Copy constructor:
+
+s1 → [20]
+s2 → [20]
+
+Creates a separate copy.
+
+Move constructor:
+
+s1 → nullptr
+s2 ─────→ [20]
+
+Transfers the resource.
+
+Why use it?
+
+It can avoid expensive copying and improve performance when transferring resources.
+
+Simple definition:
+
+Move constructor = constructor that transfers resources from one object to a new object instead of copying them.

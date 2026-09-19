@@ -1,0 +1,47 @@
+//Virtual Function
+A virtual function is a function in the parent class declared using the virtual keyword that allows runtime polymorphism.
+
+Example:
+
+class Animal {
+public:
+    virtual void sound() {
+        cout << "Animal sound";
+    }
+};
+
+class Dog : public Animal {
+public:
+    void sound() override {
+        cout << "Bark";
+    }
+};
+
+Now:
+
+Animal* a = new Dog();
+a->sound();
+
+Output:
+
+Bark
+Why?
+
+Because sound() is virtual, C++ looks at the actual object (Dog) at runtime and calls:
+
+Dog::sound()
+
+Without virtual, the call through the parent pointer would resolve differently.
+
+override
+void sound() override
+
+override tells the compiler:
+
+"I intend to override a virtual function from the parent."
+
+If you make a mistake in the function signature, the compiler catches it.
+
+Simple definition
+
+Virtual function = a parent-class function that enables the child class's overridden version to be selected at runtime.

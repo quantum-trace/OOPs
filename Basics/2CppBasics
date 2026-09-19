@@ -1,0 +1,115 @@
+//Arrays and Strings
+
+Arrays : 
+Syntax : 
+Data_type  array_name  [Array_size] 
+
+int arr [8];
+
+Assume n = number of elements/characters, and m = size of another array/string.
+k usually means the number of distinct elements/characters you are storing, not the total size of the input.
+
+| Topic / Operation                   |               Time Complexity |           Space Complexity |
+| ----------------------------------- | ----------------------------: | -------------------------: |
+| Array access `arr[i]`               |                      **O(1)** |                   **O(1)** |
+| Array update `arr[i]`               |                      **O(1)** |                   **O(1)** |
+| Array traversal                     |                      **O(n)** |                   **O(1)** |
+| Linear search                       |                      **O(n)** |                   **O(1)** |
+| Binary search (sorted)              |                  **O(log n)** |         **O(1)** iterative |
+| Find min/max                        |                      **O(n)** |                   **O(1)** |
+| Reverse array                       |                      **O(n)** |                   **O(1)** |
+| Insert at beginning                 |                      **O(n)** |                   **O(1)** |
+| Insert in middle                    |                      **O(n)** |                   **O(1)** |
+| Insert at end                       | **O(1)** amortized (`vector`) |         **O(1)** amortized |
+| Delete from beginning               |                      **O(n)** |                   **O(1)** |
+| Delete from middle                  |                      **O(n)** |                   **O(1)** |
+| Delete from end                     |                      **O(1)** |                   **O(1)** |
+| Copy array                          |                      **O(n)** |                   **O(n)** |
+| Sort array                          |                **O(n log n)** |               **O(log n)** |
+| Frequency array                     |                      **O(n)** |                   **O(k)** |
+| Hash map frequency                  |              **O(n)** average |                   **O(k)** |
+| Two pointers                        |                      **O(n)** |                   **O(1)** |
+| Sliding window                      |                      **O(n)** |                   **O(k)** |
+| Prefix sum                          |                      **O(n)** |                   **O(n)** |
+| Prefix sum query                    |                      **O(1)** |                   **O(1)** |
+| Nested loops over array             |                     **O(n²)** |                   **O(1)** |
+| Three nested loops                  |                     **O(n³)** |                   **O(1)** |
+| Generate all pairs                  |                     **O(n²)** |                   **O(1)** |
+| Generate all subarrays              |                     **O(n²)** |         **O(1)** auxiliary |
+| Construct/store all subarrays       |                     **O(n³)** | **O(n³)** output-dependent |
+| Kadane's algorithm                  |                      **O(n)** |                   **O(1)** |
+| Merge two sorted arrays             |                    **O(n+m)** |                 **O(n+m)** |
+| Intersection using set/hash         |            **O(n+m)** average |                 **O(n+m)** |
+| Rotate array                        |                      **O(n)** |                   **O(1)** |
+| Remove duplicates from sorted array |                      **O(n)** |                   **O(1)** |
+| String access `s[i]`                |                      **O(1)** |                   **O(1)** |
+| String length `s.length()`          |                      **O(1)** |                   **O(1)** |
+| String traversal                    |                      **O(n)** |                   **O(1)** |
+| String linear search                |                      **O(n)** |                   **O(1)** |
+| String reverse in-place             |                      **O(n)** |                   **O(1)** |
+| String comparison                   |           **O(n)** worst case |                   **O(1)** |
+| `s.substr(pos,len)`                 |                    **O(len)** |                 **O(len)** |
+| String insert beginning/middle      |                      **O(n)** |                   **O(1)** |
+| String delete beginning/middle      |                      **O(n)** |                   **O(1)** |
+| String frequency `[26]`             |                      **O(n)** |                   **O(1)** |
+| Anagram using frequency             |                    **O(n+m)** |                   **O(1)** |
+| Anagram using sorting               |                **O(n log n)** |               **O(log n)** |
+| Palindrome check                    |                      **O(n)** |                   **O(1)** |
+| String sliding window               |                      **O(n)** |                   **O(k)** |
+| String two pointers                 |                      **O(n)** |                   **O(1)** |
+| Generate all substrings             |                     **O(n²)** |         **O(1)** auxiliary |
+| Construct all substrings            |                     **O(n³)** |          **O(n²)**+ output |
+| Generate all subsequences           |                     **O(2ⁿ)** |         **O(n)** auxiliary |
+| Store all subsequences              |                   **O(n·2ⁿ)** |                **O(n·2ⁿ)** |
+
+
+//Strings
+Syntax :
+ string str = "Hello World";
+
+ Assume n = length of one string, and m = length of another string.
+
+| String operation / pattern                      |               Time Complexity |           Space Complexity |
+| ----------------------------------------------- | ----------------------------: | -------------------------: |
+| Access `s[i]`                                   |                      **O(1)** |                   **O(1)** |
+| Update `s[i]`                                   |                      **O(1)** |                   **O(1)** |
+| `s.length()` / `s.size()`                       |                      **O(1)** |                   **O(1)** |
+| Traverse string                                 |                      **O(n)** |                   **O(1)** |
+| Linear search for character                     |                      **O(n)** |                   **O(1)** |
+| `s.find(char)`                                  |                      **O(n)** |                   **O(1)** |
+| Compare two strings `s == t`                    |    **O(min(n,m))** worst case |                   **O(1)** |
+| `s.push_back(c)`                                |            **O(1)** amortized |         **O(1)** amortized |
+| `s.pop_back()`                                  |                      **O(1)** |                   **O(1)** |
+| Insert at beginning                             |                      **O(n)** |                   **O(1)** |
+| Insert in middle                                |                      **O(n)** |                   **O(1)** |
+| Delete from beginning                           |                      **O(n)** |                   **O(1)** |
+| Delete from middle                              |                      **O(n)** |                   **O(1)** |
+| Reverse in-place                                |                      **O(n)** |                   **O(1)** |
+| Copy a string                                   |                      **O(n)** |                   **O(n)** |
+| `s.substr(pos,len)`                             |                    **O(len)** |                 **O(len)** |
+| Convert case (`tolower`/`toupper`) by traversal |                      **O(n)** |                   **O(1)** |
+| Frequency array `int freq[26]`                  |                      **O(n)** |                   **O(1)** |
+| Frequency array `int freq[256]`                 |                      **O(n)** |                   **O(1)** |
+| Frequency using `unordered_map`                 |              **O(n)** average |                   **O(k)** |
+| Frequency using `map`                           |                **O(n log k)** |                   **O(k)** |
+| Check palindrome (two pointers)                 |                      **O(n)** |                   **O(1)** |
+| Check anagram using frequency                   |                    **O(n+m)** |                   **O(1)** |
+| Check anagram using sorting                     |      **O(n log n + m log m)** |                 **O(n+m)** |
+| Sort string `sort()`                            |                **O(n log n)** |               **O(log n)** |
+| Sliding window                                  |                      **O(n)** |                   **O(k)** |
+| Two pointers                                    |                      **O(n)** |                   **O(1)** |
+| Prefix sum/frequency preprocessing              |                      **O(n)** |                   **O(n)** |
+| Nested loops over string                        |                     **O(n²)** |                   **O(1)** |
+| Generate all substrings                         |                     **O(n²)** |        **O(1)** auxiliary* |
+| Generate/construct all substrings               |                     **O(n³)** | **O(n²)** output-dependent |
+| All subsequences                                |                     **O(2ⁿ)** |         **O(n)** auxiliary |
+| Store all subsequences                          |                   **O(n·2ⁿ)** |                **O(n·2ⁿ)** |
+| Brute-force substring search                    |                    **O(n·m)** |                   **O(1)** |
+| KMP string matching                             |                    **O(n+m)** |                   **O(m)** |
+| Longest substring with sliding window           |                      **O(n)** |                   **O(k)** |
+| Recursion on every character                    | **O(2ⁿ)** if branching 2 ways |                   **O(n)** |
+| `stringstream` / tokenization by traversal      |            **O(n)** typically |                   **O(n)** |
+
+k = number of distinct characters being stored.
+*If you actually store the substrings, output space must be counted separately.
+

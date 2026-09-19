@@ -1,0 +1,39 @@
+//Function Overloading
+
+Function overloading means having multiple functions with the same name but different parameters in the same class/scope.
+
+Example:
+
+class Calculator {
+public:
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+};
+
+Now:
+
+Calculator c;
+
+c.add(2, 3);       // calls first function
+c.add(2, 3, 4);    // calls second function
+
+The compiler knows which function to call based on the number/type of arguments.
+
+Important
+
+Changing only the return type is NOT function overloading.
+
+❌ Not valid:
+
+int add(int a, int b);
+double add(int a, int b);
+Simple definition
+
+Function overloading = same function name, different parameter list.
+
+It is an example of compile-time polymorphism.

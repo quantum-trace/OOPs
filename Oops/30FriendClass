@@ -1,0 +1,46 @@
+//Friend Class
+A friend class is a class that is given permission to access the private and protected members of another class.
+
+We use the friend keyword.
+
+class A {
+private:
+    int x = 10;
+
+    friend class B;
+};
+
+class B {
+public:
+    void show(A obj) {
+        cout << obj.x;
+    }
+};
+
+Here:
+
+A → gives friendship to B
+B → can access A's private x
+B itself is not a child class of A
+
+So:
+
+A a;
+B b;
+
+b.show(a);  // 10
+Important
+
+Friendship is not inheritance.
+
+A
+↓ friend
+B
+
+does not mean B inherits from A.
+
+Also, friendship is not automatically mutual: if B is a friend of A, that doesn't automatically make A a friend of B.
+
+Simple definition:
+
+Friend class = a class that is given permission to access another class's private and protected members.

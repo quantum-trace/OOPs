@@ -1,0 +1,67 @@
+//Rule of 3
+The Rule of 3 is a C++ rule for classes that manage resources manually, such as dynamically allocated memory.
+
+If a class needs to define any one of these three:
+
+Destructor
+Copy Constructor
+Copy Assignment Operator
+
+then it will often need to define all three.
+
+Why?
+
+Suppose your class has:
+
+int* data;
+
+and manages memory using new.
+
+Then you need to properly handle:
+
+Copy Constructor
+      ↓
+Copy Assignment
+      ↓
+Destructor
+
+Otherwise, you can get problems like:
+
+shallow copies
+double deletion
+memory leaks
+Example
+class A {
+public:
+    int* data;
+
+    A(int x) {
+        data = new int(x);
+    }
+
+    A(const A& a) {
+        data = new int(*a.data);
+    }
+
+    A& operator=(const A& a) {
+        if (this != &a) {
+            delete data;
+            data = new int(*a.data);
+        }
+        return *this;
+    }
+
+    ~A() {
+        delete data;
+    }
+};
+
+These are the 3:
+
+1. Copy Constructor
+2. Copy Assignment Operator
+3. Destructor
+
+Simple definition:
+
+Rule of 3 = if a resource-managing class needs one of destructor, copy constructor, or copy assignment, it generally needs all three.

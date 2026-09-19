@@ -1,0 +1,38 @@
+//Abstract Class
+
+An abstract class is a class that cannot be used to create objects directly.
+
+A class becomes abstract when it has at least one pure virtual function.
+
+class Animal {
+public:
+    virtual void sound() = 0;
+};
+
+Because sound() is pure virtual, Animal is an abstract class.
+
+So:
+
+Animal a;  // ❌
+
+is not allowed.
+
+But a child class can implement the pure virtual function:
+
+class Dog : public Animal {
+public:
+    void sound() override {
+        cout << "Bark";
+    }
+};
+
+Dog d;  // ✅
+Why use an abstract class?
+
+It provides a common interface/rule for child classes.
+
+For example, every Animal must have a sound() function, but each animal can implement it differently.
+
+Simple definition:
+
+Abstract class = a class that cannot be instantiated directly and is used as a base class for derived classes.

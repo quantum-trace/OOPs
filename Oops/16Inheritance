@@ -1,0 +1,42 @@
+//Inheritance
+Inheritance means creating a new class from an existing class so that the new class can reuse its properties and functions.
+
+Example:
+
+class Student {
+public:
+    string name;
+
+    void study() {
+        cout << "Studying";
+    }
+};
+
+class CollegeStudent : public Student {
+};
+
+Here:
+
+Student → Parent / Base class
+CollegeStudent → Child / Derived class
+
+Now:
+
+CollegeStudent s;
+
+s.name = "Shubham";
+s.study();
+
+CollegeStudent can use the public members inherited from Student.
+
+Why use inheritance?
+
+Mainly for code reuse and representing an is-a relationship.
+
+Example:
+
+CollegeStudent is a Student.
+
+Simple definition:
+
+Inheritance = mechanism where a child class acquires properties and functions of a parent class.

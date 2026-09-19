@@ -1,0 +1,971 @@
+Complete C++ OOP Interview Question Bank
+
+1. OOP Fundamentals
+What is OOP?
+Why do we use OOP?
+What are the advantages of OOP?
+What are the disadvantages of OOP?
+What are the four pillars of OOP?
+What is the difference between procedural programming and OOP?
+What is a class?
+What is an object?
+What is the difference between a class and an object?
+What is an instance of a class?
+What is the state of an object?
+What is the behavior of an object?
+What is the difference between data and behavior?
+Why do we need objects?
+Can a class exist without objects?
+Can we create an object without a class?
+What happens when an object is created?
+Where are objects stored in memory?
+What is the size of an empty class?
+Why is an empty class not necessarily size 0?
+What is a member of a class?
+What are data members?
+What are member functions?
+What is a member method?
+What is the difference between member function and normal function?
+
+
+2. Access Specifiers
+What are access specifiers?
+What are the three access specifiers in C++?
+Explain public.
+Explain private.
+Explain protected.
+Difference between public, private and protected?
+What is the default access specifier in a class?
+What is the default access specifier in a struct?
+Difference between class and struct in C++?
+Can a private member be accessed outside the class?
+Can a protected member be accessed outside the class?
+Can a child class access private members of its parent?
+Can a child class access protected members of its parent?
+Why do we make data members private?
+Why are member functions often made public?
+Can a class have multiple access specifiers?
+Can a constructor be private?
+Can a destructor be private?
+
+
+3. Constructors
+What is a constructor?
+Why do we need constructors?
+How do you identify a constructor?
+Can a constructor have a return type?
+Can a constructor be overloaded?
+Can a constructor be static?
+Can a constructor be virtual?
+Can a constructor be inherited?
+Can a constructor be private?
+Can a constructor be protected?
+When is a constructor called?
+How many times is a constructor called?
+Is a constructor automatically called?
+What happens if we don't write a constructor?
+What is a default constructor?
+What is a user-defined default constructor?
+What is an implicitly generated default constructor?
+What is a parameterized constructor?
+Why do we use parameterized constructors?
+What is a constructor with multiple parameters?
+Can we have multiple constructors in one class?
+What is constructor overloading?
+What is a copy constructor?
+Why do we need a copy constructor?
+What is the syntax of a copy constructor?
+Why does a copy constructor usually take a reference?
+Why is the copy constructor parameter usually const?
+What happens if the copy constructor takes the object by value?
+Difference between copy constructor and normal constructor?
+Difference between copy constructor and copy assignment?
+When is a copy constructor called?
+When is copy assignment called?
+What is constructor delegation?
+What is an initializer list?
+Why should we use constructor initializer lists?
+Can const data members be initialized inside the constructor body?
+Can reference members be initialized inside the constructor body?
+Why must const and reference members use initializer lists?
+What is the order of initialization of data members?
+Does initialization follow the order written in the initializer list?
+What is the order of constructor execution in inheritance?
+Can a constructor call another constructor?
+What happens if a constructor throws an exception?
+
+
+4. Destructor
+What is a destructor?
+Why do we need a destructor?
+How do you identify a destructor?
+Can a destructor have a return type?
+Can a destructor take parameters?
+Can a class have multiple destructors?
+Can a destructor be overloaded?
+When is a destructor called?
+When is an object's destructor automatically called?
+What happens when an object goes out of scope?
+What is the order of destructor execution?
+What happens to local objects when main() ends?
+What happens when dynamically allocated object is deleted?
+Why should a base-class destructor sometimes be virtual?
+What is a virtual destructor?
+What happens if the base destructor is not virtual?
+Can a destructor be private?
+Can a destructor be pure virtual?
+What happens if a destructor throws an exception?
+
+
+5. this Pointer
+What is the this pointer?
+What does this point to?
+Why do we use this?
+When is this available?
+Can we use this inside a static member function?
+Why can't static member functions use this?
+What is this->x?
+Difference between x and this->x?
+Why is this useful when parameter and data member have the same name?
+Can we return *this?
+Why is return *this used in operator overloading/chaining?
+Is this a pointer or reference?
+
+
+6. Static Members
+What is a static data member?
+Difference between static and non-static data members?
+Does every object get a separate static member?
+How many copies of a static data member exist?
+How do you access a static data member?
+Can a static member be accessed using an object?
+Can a static member be accessed using the class name?
+Why do we use ClassName::member?
+What is a static member function?
+Why don't static member functions have a this pointer?
+Can a static member function access non-static data?
+Can a static member function access static data?
+Can a static member function be called without an object?
+Can a static function be virtual?
+Can a static data member be private?
+What is a static local variable?
+Difference between static data member and static local variable?
+
+
+7. Encapsulation
+What is encapsulation?
+Why is encapsulation important?
+How do we achieve encapsulation in C++?
+Is encapsulation simply making variables private?
+Difference between encapsulation and data hiding?
+Give a real-world example of encapsulation.
+Why should data members generally not be public?
+What are getters and setters?
+Are getters and setters always necessary?
+Can encapsulation be achieved without getters/setters?
+
+
+8. Abstraction
+What is abstraction?
+Why do we need abstraction?
+How is abstraction achieved in C++?
+Difference between abstraction and encapsulation?
+Give a real-world example of abstraction.
+What is an abstract class?
+Can we create an object of an abstract class?
+Why can't we instantiate an abstract class?
+What is a pure virtual function?
+What is the syntax of a pure virtual function?
+Why do we use = 0?
+Can an abstract class have normal functions?
+Can an abstract class have constructors?
+Can an abstract class have a destructor?
+Can an abstract class have data members?
+Can a pure virtual function have an implementation?
+Can a derived class remain abstract?
+When does a derived class become concrete?
+
+
+9. Inheritance
+What is inheritance?
+Why do we use inheritance?
+What is a base class?
+What is a derived class?
+What is parent-child relationship in inheritance?
+What is an "is-a" relationship?
+What is code reuse through inheritance?
+What are the different types of inheritance?
+What is single inheritance?
+What is multilevel inheritance?
+What is multiple inheritance?
+What is hierarchical inheritance?
+What is hybrid inheritance?
+Can C++ support multiple inheritance?
+What are the advantages of inheritance?
+What are the disadvantages of inheritance?
+Can a child class access private members of its parent?
+Can a child class access protected members?
+Can a child class access public members?
+What happens to private members during inheritance?
+What is the difference between inheritance and composition?
+What is an "is-a" vs "has-a" relationship?
+When should you prefer composition over inheritance?
+
+
+10. Types of Inheritance + Access
+What happens with public inheritance?
+What happens with protected inheritance?
+What happens with private inheritance?
+Difference between public, protected and private inheritance?
+What happens to parent's public members under private inheritance?
+What happens to parent's protected members under public inheritance?
+What happens to parent's protected members under protected inheritance?
+What happens to parent's private members under inheritance?
+What is the default inheritance type for a class?
+What is the default inheritance type for a struct?
+
+
+11. Constructor/Destructor in Inheritance
+Which constructor executes first: parent or child?
+Which destructor executes first: parent or child?
+Why is the parent constructor called first?
+Why is the child destructor called first?
+Can a child constructor call a parent constructor?
+How do you explicitly call a parent constructor?
+What happens if the parent has no default constructor?
+What happens if the parent has only a parameterized constructor?
+Can a child class choose which parent constructor to call?
+What is the constructor execution order in multiple inheritance?
+What is the destructor execution order in multiple inheritance?
+What happens if a base class constructor throws an exception?
+
+
+12. Function Overloading
+What is function overloading?
+Why do we use function overloading?
+What are the rules for function overloading?
+Can functions be overloaded based only on return type?
+Can functions be overloaded based on number of parameters?
+Can functions be overloaded based on parameter types?
+Can functions be overloaded based on parameter order?
+Can member functions be overloaded?
+Can constructors be overloaded?
+Can static functions be overloaded?
+What happens when overloaded functions have ambiguous arguments?
+What is compile-time polymorphism?
+Why is function overloading compile-time polymorphism?
+
+
+13. Operator Overloading
+What is operator overloading?
+Why do we need operator overloading?
+Which operators can be overloaded?
+Which operators cannot be overloaded?
+Can we create a completely new operator?
+Can we change operator precedence?
+Can we change operator associativity?
+Can we change the number of operands of an operator?
+What is unary operator overloading?
+What is binary operator overloading?
+How do you overload +?
+How do you overload -?
+How do you overload ==?
+How do you overload <?
+How do you overload []?
+How do you overload ()?
+How do you overload <<?
+How do you overload >>?
+Difference between member and non-member operator overloading?
+Why is << usually overloaded as a non-member/friend function?
+Can an operator function be static?
+Can operator= be overloaded?
+What is the difference between operator overloading and function overloading?
+
+
+14. Function Overriding
+What is function overriding?
+What are the conditions for overriding?
+Difference between overloading and overriding?
+Can a child class override a non-virtual function?
+What happens when a child function has the same name as parent function?
+What is method hiding?
+Difference between overriding and hiding?
+What is the override keyword?
+Why should we use override?
+What happens if override is incorrectly used?
+Can static functions be overridden?
+Can constructors be overridden?
+Can destructors be overridden?
+Can private functions be overridden?
+Can a virtual function be overridden with a different return type?
+What are covariant return types?
+
+
+15. Polymorphism
+What is polymorphism?
+Why is polymorphism useful?
+What are the types of polymorphism?
+What is compile-time polymorphism?
+What is runtime polymorphism?
+Examples of compile-time polymorphism?
+Examples of runtime polymorphism?
+Difference between compile-time and runtime polymorphism?
+How does function overloading provide polymorphism?
+How does operator overloading provide polymorphism?
+How does overriding provide polymorphism?
+Why are virtual functions needed for runtime polymorphism?
+What is dynamic dispatch?
+What is static binding?
+What is dynamic binding?
+Difference between early binding and late binding?
+
+
+16. Virtual Functions
+What is a virtual function?
+Why do we need virtual functions?
+What happens if a function isn't virtual?
+What happens when a virtual function is called through a base pointer?
+What happens when a virtual function is called through a derived object?
+What is dynamic dispatch?
+What is a virtual table (vtable)?
+What is a virtual pointer (vptr)?
+How does virtual function dispatch work internally?
+Does every class have a vtable?
+Does every object have a vptr?
+Does a class with virtual functions become larger?
+What is the runtime cost of virtual functions?
+Can constructors be virtual?
+Why can't constructors be virtual?
+Can destructors be virtual?
+Why should base destructors be virtual in polymorphic classes?
+Can a static function be virtual?
+Why can't static functions be virtual?
+Can a private function be virtual?
+Can a friend function be virtual?
+Can a virtual function be inline?
+Can a virtual function be pure?
+Can a virtual function have a default implementation?
+What is virtual function overriding?
+
+
+17. Pure Virtual Functions / Abstract Classes
+What is a pure virtual function?
+Difference between virtual and pure virtual function?
+What does = 0 mean?
+What is an abstract class?
+Can we instantiate an abstract class?
+Can an abstract class have a constructor?
+Can an abstract class have a destructor?
+Can an abstract class have normal member functions?
+Can an abstract class have data members?
+Can a pure virtual function have a body?
+What happens if a derived class doesn't implement a pure virtual function?
+Can an abstract class have static functions?
+Why would you use an abstract class?
+Difference between interface and abstract class in C++?
+How can you create an interface-like class in C++?
+
+
+18. Virtual Destructor
+Why should a base destructor be virtual?
+What is a virtual destructor?
+What happens if we delete a derived object through a base pointer?
+What happens if the base destructor isn't virtual?
+Can a pure virtual destructor exist?
+Why does a pure virtual destructor still need a definition?
+Give an example where virtual destructor prevents a bug.
+
+
+19. Friend Function / Friend Class
+What is a friend function?
+Why do we use friend functions?
+Is a friend function a member function?
+How do you declare a friend function?
+Can a friend function access private members?
+Can a friend function access protected members?
+Can a friend function access public members?
+Does friendship break encapsulation?
+Is friendship inherited?
+Is friendship mutual?
+Is friendship transitive?
+What is a friend class?
+How does a friend class work?
+Can one class be a friend of another?
+Difference between friend function and member function?
+Difference between friend function and inheritance?
+
+
+20. Shallow Copy / Deep Copy
+What is shallow copy?
+What is deep copy?
+Difference between shallow and deep copy?
+Why is shallow copy dangerous with pointers?
+What is a dangling pointer?
+What is double deletion?
+When is deep copy required?
+How do you implement a deep copy?
+What happens if two objects point to the same dynamically allocated memory?
+How does a copy constructor perform shallow copying?
+How do you write a deep-copy copy constructor?
+How do you write a deep-copy assignment operator?
+Why should we check this != &obj in copy assignment?
+What happens if we don't handle self-assignment?
+
+
+21. Copy Constructor vs Assignment
+Difference between copy constructor and copy assignment operator?
+When is the copy constructor called?
+When is copy assignment called?
+What happens in:
+A a = b;
+What happens in:
+A a(b);
+What happens in:
+A a;
+a = b;
+Is A a = b assignment or initialization?
+What is copy initialization?
+What is direct initialization?
+
+
+22. Move Semantics
+What is move semantics?
+Why was move semantics introduced?
+What is an rvalue?
+What is an lvalue?
+Difference between lvalue and rvalue?
+What is an rvalue reference?
+What does && mean?
+What is std::move()?
+Does std::move() actually move anything?
+What does std::move() do internally/conceptually?
+What is a move constructor?
+What is a move assignment operator?
+Difference between move constructor and move assignment?
+When is a move constructor called?
+When is a move assignment operator called?
+Why is moving faster than copying?
+What happens to the moved-from object?
+What state should a moved-from object be in?
+Can we use a moved-from object?
+Why should a move constructor usually be noexcept?
+What happens if a move constructor isn't noexcept?
+How does std::vector use move constructors?
+
+
+23. Rule of 3 / 5 / 0
+What is Rule of 3?
+What are the three functions in Rule of 3?
+Why does Rule of 3 exist?
+What is Rule of 5?
+What are the five functions?
+Why was Rule of 5 introduced?
+What is Rule of 0?
+Why is Rule of 0 preferred?
+Difference between Rule of 3 and Rule of 5?
+Difference between Rule of 5 and Rule of 0?
+When should you follow Rule of 3?
+When should you follow Rule of 5?
+When can you follow Rule of 0?
+
+
+24. override and final
+What is override?
+Why use override?
+What happens if an override function doesn't actually override?
+What is final?
+How does final prevent overriding?
+How does final prevent inheritance?
+Can a class be declared final?
+Can a virtual function be declared final?
+Difference between override and final?
+
+
+25. Upcasting / Downcasting
+What is upcasting?
+What is downcasting?
+Why is upcasting generally safe?
+Why can downcasting be dangerous?
+What is dynamic_cast?
+What is static_cast?
+Difference between dynamic_cast and static_cast for downcasting?
+What happens if dynamic_cast fails for a pointer?
+What happens if dynamic_cast fails for a reference?
+What is a base-class pointer?
+What is a derived-class pointer?
+Why is upcasting useful for runtime polymorphism?
+What is object slicing?
+Difference between object slicing and upcasting?
+How can references/pointers avoid object slicing?
+
+
+26. Object Slicing
+What is object slicing?
+When does object slicing happen?
+Why does object slicing happen?
+Give an example of object slicing.
+How can object slicing be prevented?
+Does slicing happen with pointers?
+Does slicing happen with references?
+Why is slicing problematic with polymorphism?
+How does passing an object by value cause slicing?
+How does passing by reference avoid slicing?
+
+
+27. Composition / Aggregation / Association
+What is composition?
+What is aggregation?
+What is association?
+Difference between composition and aggregation?
+Difference between aggregation and association?
+Difference between composition and inheritance?
+What is a "has-a" relationship?
+What is an "is-a" relationship?
+Give examples of composition.
+Give examples of aggregation.
+Give examples of association.
+Which relationship represents stronger ownership?
+What happens to the contained object when the owner is destroyed?
+Why is composition often preferred over inheritance?
+Can composition replace inheritance?
+
+
+28. Memory/Object Lifetime
+What is object lifetime?
+When does an object's lifetime begin?
+When does an object's lifetime end?
+Difference between stack and heap objects?
+What happens when a stack object goes out of scope?
+What happens when a heap object is not deleted?
+What is a memory leak?
+What is a dangling pointer?
+What is a wild pointer?
+What is double deletion?
+What is RAII?
+Why is RAII important in C++?
+How does RAII relate to constructors and destructors?
+Why are smart pointers preferred over raw pointers?
+
+
+29. Smart Pointers — Important C++ OOP/Resource Questions
+What is a smart pointer?
+Why do we use smart pointers?
+What is unique_ptr?
+What is shared_ptr?
+What is weak_ptr?
+Difference between unique_ptr and shared_ptr?
+Difference between shared_ptr and weak_ptr?
+Can unique_ptr be copied?
+Can unique_ptr be moved?
+What is ownership?
+What is shared ownership?
+What is a reference count?
+What is a control block in shared_ptr?
+What is a circular reference?
+How does weak_ptr solve circular references?
+What does make_unique() do?
+What does make_shared() do?
+Why prefer make_unique/make_shared?
+What happens when the last shared_ptr is destroyed?
+What happens if shared_ptrs form a cycle?
+When should you use weak_ptr?
+
+
+30. const and OOP
+What is a const member function?
+Why use const member functions?
+Can a const object call a non-const member function?
+Can a const object call a const member function?
+Can a const member function modify data members?
+What is a mutable data member?
+Can a constructor be const?
+Can a destructor be const?
+What is a const object?
+Difference between const object and const member function?
+Why should getter functions often be const?
+
+
+31. static vs Object
+Difference between static and non-static data members?
+Where is static data stored?
+Does every object contain static data?
+How many copies of static data exist?
+Can static members be accessed without objects?
+Can static functions access non-static members?
+Why can't static functions access this?
+Can static functions be virtual?
+Can static members be inherited?
+
+
+32. Multiple Inheritance and Diamond Problem
+What is the diamond problem?
+Why does the diamond problem occur?
+Give an example of the diamond problem.
+What is ambiguity in multiple inheritance?
+How does C++ resolve the diamond problem?
+What is virtual inheritance?
+How does virtual inheritance work?
+Difference between virtual function and virtual inheritance?
+Why do we use virtual base classes?
+What happens if two parent classes have functions with the same name?
+How do you resolve ambiguity in multiple inheritance?
+What is scope resolution used for in multiple inheritance?
+
+
+33. Object-Oriented Design Questions
+When would you use inheritance?
+When would you use composition?
+What is tight coupling?
+What is loose coupling?
+Why is loose coupling desirable?
+What is high cohesion?
+What is low cohesion?
+What makes a class well-designed?
+What is separation of concerns?
+What is single responsibility?
+What is dependency injection?
+How does dependency injection relate to OOP?
+How would you design a BankAccount class?
+How would you design a Library Management System?
+How would you design a Parking Lot?
+How would you design a Vehicle hierarchy?
+How would you design a Payment system?
+How would you design a Notification system?
+
+
+34. SOLID Principles — Common OOP Interview Extension
+What are SOLID principles?
+What is Single Responsibility Principle?
+What is Open/Closed Principle?
+What is Liskov Substitution Principle?
+What is Interface Segregation Principle?
+What is Dependency Inversion Principle?
+Give a real-world example of SRP.
+Give an example violating OCP.
+Explain LSP with inheritance.
+How does composition help SOLID design?
+Difference between Dependency Inversion and Dependency Injection?
+
+
+35. C++ Special Member Functions
+What are special member functions?
+What are the six commonly discussed special member functions?
+Default constructor
+Destructor
+Copy constructor
+Copy assignment operator
+Move constructor
+Move assignment operator
+When does the compiler generate each one?
+When are implicitly generated functions deleted?
+What does = default mean?
+What does = delete mean?
+Why would you delete a copy constructor?
+How can you make a class non-copyable?
+How can you make a class non-movable?
+What is the Rule of Zero in relation to special member functions?
+
+
+36. Tricky Conceptual Questions
+Is a constructor a member function?
+Is a destructor a member function?
+Can constructors be inherited?
+Can constructors be overloaded?
+Can constructors be virtual?
+Can destructors be overloaded?
+Can destructors be virtual?
+Can constructors be static?
+Can destructors be static?
+Can a class have no constructor?
+Can a class have multiple constructors?
+Can a class have multiple destructors?
+Can an object call a static function?
+Can a static function access an object member?
+Can an object be created from an abstract class?
+Can an abstract class have a constructor?
+Can a pure virtual function have an implementation?
+Can a private function be virtual?
+Can a friend function be virtual?
+Can a static function be virtual?
+Can an object be copied without a copy constructor?
+What happens if you don't define a copy constructor?
+What does the compiler-generated copy constructor do?
+What does the compiler-generated assignment operator do?
+What is the difference between initialization and assignment?
+Why is Student s1 = s2 not necessarily calling operator=?
+What is self-assignment?
+Why is if (this == &obj) checked?
+What happens when you return an object by value?
+What is copy elision?
+What is NRVO?
+What is RVO?
+How does C++17 change copy/move behavior for temporary objects?
+
+
+37. Output-Based Interview Questions
+
+Interviewers can give code and ask "What will this print?"
+
+You should practice questions involving:
+
+Constructor execution order
+Destructor execution order
+Constructor overloading
+Copy constructor calls
+Copy assignment calls
+Shallow copy
+Deep copy
+Static data members
+Static member functions
+this pointer
+Function overloading
+Function overriding
+Virtual functions
+Non-virtual functions with base pointers
+Pure virtual functions
+Abstract classes
+Virtual destructors
+Multiple inheritance
+Diamond problem
+Object slicing
+Upcasting
+Downcasting
+Move constructor
+Move assignment
+std::move()
+const member functions
+override
+final
+Default arguments with overloaded functions
+Ambiguous overloaded calls
+38. Code-Writing Questions
+
+You can also be asked to write code, not just explain theory.
+
+Create a class and object.
+Create a class with private data and public getters/setters.
+Write a default constructor.
+Write a parameterized constructor.
+Write a copy constructor.
+Write a destructor.
+Demonstrate constructor overloading.
+Demonstrate function overloading.
+Demonstrate function overriding.
+Demonstrate inheritance.
+Demonstrate multilevel inheritance.
+Demonstrate multiple inheritance.
+Demonstrate hierarchical inheritance.
+Implement a pure virtual function.
+Create an abstract class.
+Demonstrate runtime polymorphism.
+Write a virtual destructor.
+Overload +.
+Overload ==.
+Overload <<.
+Implement deep copy.
+Implement copy assignment.
+Implement move constructor.
+Implement move assignment.
+Implement Rule of 5.
+Implement a non-copyable class.
+Implement a class using unique_ptr.
+Implement a class using shared_ptr.
+Solve the diamond problem using virtual inheritance.
+
+
+39. Scenario-Based Questions
+
+These are especially common in actual SDE interviews.
+
+Design a Shape class with different shapes.
+How would you calculate area for Circle, Rectangle and Triangle using polymorphism?
+Design a Vehicle hierarchy.
+Design Car, Bike, Truck using OOP.
+Design a payment system supporting multiple payment methods.
+Design a notification system supporting Email/SMS/Push.
+Design a library system using classes.
+Design a parking lot using OOP.
+Design a food-ordering system using OOP.
+Design a chess game using OOP.
+Design an elevator system using OOP.
+Design a tic-tac-toe game using OOP.
+Design a bank account system.
+Design an employee management system.
+Design a school management system.
+Explain where you would use inheritance in your design.
+Explain where you would use composition.
+Explain where you would use polymorphism.
+Explain where you would use abstraction.
+Explain how you would prevent direct modification of sensitive data.
+Explain how you would make your design extensible.
+
+
+40. Very Common "Difference Between" Questions
+
+These are high-value interview questions:
+
+Class vs Object
+Class vs Struct
+Data member vs Member function
+Constructor vs Destructor
+Constructor vs Normal function
+Default constructor vs Parameterized constructor
+Constructor vs Copy constructor
+Copy constructor vs Copy assignment
+Copy vs Move
+Move constructor vs Move assignment
+Shallow copy vs Deep copy
+Overloading vs Overriding
+Compile-time vs Runtime polymorphism
+Virtual vs Pure virtual function
+Virtual function vs Normal function
+Abstract class vs Concrete class
+Encapsulation vs Abstraction
+Inheritance vs Composition
+Composition vs Aggregation
+Aggregation vs Association
+Public vs Private vs Protected
+Upcasting vs Downcasting
+Static vs Non-static member
+Static function vs Non-static function
+override vs final
+Rule of 3 vs Rule of 5
+Rule of 5 vs Rule of 0
+Stack object vs Heap object
+Raw pointer vs Smart pointer
+unique_ptr vs shared_ptr vs weak_ptr
+
+
+41. Advanced C++ OOP Questions
+
+These aren't always asked in basic SDE interviews, but they can appear in stronger C++ interviews:
+
+What is RAII?
+What is object lifetime?
+What is the vtable?
+What is the vptr?
+How does dynamic dispatch work internally?
+What is ABI?
+What is object layout?
+How does multiple inheritance affect object layout?
+What is virtual inheritance internally?
+What is a covariant return type?
+What is name hiding?
+What is function hiding?
+What is using Base::function?
+What is CRTP?
+What is type erasure?
+What is the Pimpl idiom?
+What is an interface class?
+What is dependency inversion?
+What is dependency injection?
+What are design patterns?
+Explain Singleton.
+Explain Factory.
+Explain Abstract Factory.
+Explain Strategy.
+Explain Observer.
+Explain Adapter.
+Explain Decorator.
+Explain Template Method.
+Explain SOLID and design patterns together.
+
+
+42. Questions Interviewers Ask About Your Own Code
+
+Since you have projects on your resume, they can ask:
+
+Where have you used OOP in your project?
+Which classes did you create?
+Why did you use classes?
+Where did you use inheritance?
+Where did you use polymorphism?
+Where did you use abstraction?
+Where did you use encapsulation?
+Why did you make this member private?
+Why did you choose composition instead of inheritance?
+Why did you use a particular class hierarchy?
+How are objects created in your project?
+How is memory managed?
+Did you use constructors?
+Did you use destructors?
+Did you use smart pointers?
+Why did you choose one design over another?
+What happens if you need to add another type/class?
+How would you make your design more extensible?
+What would you change if the project became 10× larger?
+The Core Set You Absolutely Need to Be Able to Answer
+
+Don't treat all 700+ questions as 700 separate things. Many are variations of the same concepts.
+
+For an SDE interview, make sure you can confidently explain and code these:
+
+Foundation
+Class
+Object
+Data members
+Member functions
+Access specifiers
+class vs struct
+Constructors/Destructors
+Constructor
+Default constructor
+Parameterized constructor
+Copy constructor
+Destructor
+Initializer list
+Constructor/destructor order
+Core OOP
+Encapsulation
+Abstraction
+Inheritance
+Types of inheritance
+Polymorphism
+Composition
+Aggregation
+Association
+Polymorphism
+Function overloading
+Operator overloading
+Function overriding
+Virtual function
+Pure virtual function
+Abstract class
+Virtual destructor
+Runtime vs compile-time polymorphism
+C++ Object Management
+this
+Static members
+Shallow vs deep copy
+Copy assignment
+Move constructor
+Move assignment
+Rule of 3
+Rule of 5
+Rule of 0
+override
+final
+Upcasting/downcasting
+Object slicing
+Strong C++ interview layer
+RAII
+Smart pointers
+unique_ptr
+shared_ptr
+weak_ptr
+const member functions
+= default
+= delete
+lvalue/rvalue
+std::move
+vtable/vptr
+Diamond problem
+Virtual inheritance
+Design layer
+SOLID
+Composition vs inheritance
+Dependency injection
+Basic design patterns
+Small OOP design problems
+
+This is the complete question bank I would use for your OOP interview preparation. We can now go through these one by one in interview-question format, just like we studied the topics: question → your answer → correction → next question, rather than dumping answers to all of them at once.

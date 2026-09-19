@@ -1,0 +1,59 @@
+//Move Assignment Operator
+
+The move assignment operator transfers resources from one already-existing object to another already-existing object.
+
+It uses operator= with an rvalue reference.
+
+Example:
+
+class Student {
+public:
+    int* age;
+
+    Student(int a) {
+        age = new int(a);
+    }
+
+    Student& operator=(Student&& s) {
+        delete age;
+        age = s.age;
+        s.age = nullptr;
+        return *this;
+    }
+};
+
+Now:
+
+Student s1(20);
+Student s2(25);
+
+s2 = std::move(s1);
+
+Here:
+
+s1 already exists
+s2 already exists
+Resources of s1 are transferred to s2
+
+After the move:
+
+s1 → nullptr
+
+s2 → [20]
+Move Constructor vs Move Assignment
+
+Move constructor:
+
+Student s2 = std::move(s1);
+
+→ Creates a new object.
+
+Move assignment:
+
+s2 = std::move(s1);
+
+→ s2 already exists.
+
+Simple definition:
+
+Move assignment = transfers resources from one existing object to another existing object.

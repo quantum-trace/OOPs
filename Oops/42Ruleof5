@@ -1,0 +1,47 @@
+//Rule of 5
+
+The Rule of 5 is an extension of the Rule of 3 for classes that manage resources manually.
+
+If a class needs custom handling for resource management, we consider these 5 special member functions:
+
+Destructor
+Copy Constructor
+Copy Assignment Operator
+Move Constructor
+Move Assignment Operator
+
+So:
+
+Rule of 3:
+Destructor
+Copy Constructor
+Copy Assignment
+
+Rule of 5:
++ Move Constructor
++ Move Assignment
+Why?
+
+Suppose your class owns dynamically allocated memory:
+
+int* data;
+
+You need to handle both:
+
+Copying:
+
+A b = a;
+
+→ create an independent copy.
+
+Moving:
+
+A b = std::move(a);
+
+→ transfer the resource.
+
+And the destructor must eventually release the resource.
+
+Simple definition
+
+Rule of 5 = when a class manually manages resources and needs custom copy/destruction behavior, it should consider all five special member functions.

@@ -1,0 +1,54 @@
+//Class
+A class is a user-defined data type that groups data and functions together.
+It groups data (variables) and functions that belong together.
+For example:
+        
+class Student {
+public:
+    string name;
+    int age;
+
+    void study() {
+        cout << "Student is studying";
+    }
+};
+
+Here Student is a class.
+
+It contains:
+
+Student -> Class name
+│
+├── name       → data/member variable
+├── age        → data/member variable
+│
+└── study()    → member function
+
+So the class describes what a Student object has and what it can do.
+
+Why do we use classes?
+
+Without a class, you might have:
+
+string name;
+int age;
+
+void study() {
+    ...
+}
+
+These things are separate.
+
+With a class, we group related things:
+
+class Student {
+public:
+    string name;
+    int age;
+
+    void study() {
+        ...
+    }
+};
+
+Now everything related to a Student is grouped together.
